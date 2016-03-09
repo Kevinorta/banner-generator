@@ -6,6 +6,12 @@
    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
         $(function(){ //shorthand document.ready
+            $("#button").click(function(){
+              var name = $("#name").val();
+              $(bannerName).html(name);
+              var color1 = $('input[name="color1"]:checked', '#form').val();
+              $("#bannerName").css('color',color1);
+            })
             
         });
         
@@ -14,11 +20,11 @@
       #banner{
         width:90%;
         height:300px;
-        border:2px solid red;
+        border:1px;
         margin:auto;
-        
+        background: gradient();
       }
-      #name{
+      #bannerName{
         font-size:6em;
         text-align:center;
         color:red;
@@ -27,8 +33,20 @@
   </head>
   <body>
   <div id="banner">
-    <h1 id="name">Kevin Orta</h1>
+    <h1 id="bannerName">Kevin Orta</h1>
   </div>
-  <h1></h1>
+  <h1>Banner Choices</h1>
+  <h2>Whats your name?</h2>
+  <input type="text" name="name" id="name">
+  <h2>Pick a Color</h2>
+  <form id="form">
+  <input type="radio" name="color1" value="blue"/>Blue<br>
+  <input type="radio" name="color1" value="green"/>Green<br>
+  <input type="radio" name="color1" value="yellow"/>Yellow<br>
+  <input type="radio" name="color1" value="red"/>Red<br>
+  <h2>Name another color</h2>
+  <input type="text" name="color 2"><br>
+  <input id="button" type="button" name="button" value="button"/>
+  </form>
   </body>
-</html> random text
+</html>
