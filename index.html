@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>JQuery Template</title>
-   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-        $(function(){ //shorthand document.ready
-            $("#button").click(function(){
-              var name = $("#name").val();
-              $(bannerName).html(name);
-              var color1 = $('input[name="color1"]:checked', '#form').val();
-              $("#bannerName").css('color',color1);
-            })
-            
+
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() { //shorthand document.ready
+      $("#button").click(function() {
+        $("#bannerr").fadeIn("slow");
+        var name = $("#name").val();
+        $("#bannerName").html(name);
+        var color1 = $('input[name="color1"]:checked').val();
+        var color2 = $('#color2').val();
+        var stop = $("#stop").val();
+
+        $('#bannerr').css({
+          background: "linear-gradient( 90deg, " + color1 + ", " + color2 + " " + stop + "%)"
+
         });
-        
-    </script>
-    <style type="text/css">
-      #banner{
-        width:90%;
-        height:300px;
-        border:1px;
-        margin:auto;
-        background: gradient();
-      }
-      #bannerName{
-        font-size:6em;
-        text-align:center;
-        color:red;
-      }
-    </style>
-  </head>
-  <body>
-  <div id="banner">
+      });
+
+
+
+
+
+    });
+  </script>
+  <style type="text/css">
+    #bannerr {
+      width: 100%;
+      height: 250px;
+      border: 1px;
+      margin: auto;
+      display:none;
+    }
+    
+    #bannerName {
+      font-size: 7em;
+      text-align: center;
+      color: white;
+      display: none;
+    }
+    
+    #stop {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bannerr">
     <h1 id="bannerName">Kevin Orta</h1>
   </div>
   <h1>Banner Choices</h1>
+  <input type="range" id="stop" name="points" min="0" max="100">
   <h2>Whats your name?</h2>
   <input type="text" name="name" id="name">
   <h2>Pick a Color</h2>
-  <form id="form">
-  <input type="radio" name="color1" value="blue"/>Blue<br>
-  <input type="radio" name="color1" value="green"/>Green<br>
-  <input type="radio" name="color1" value="yellow"/>Yellow<br>
-  <input type="radio" name="color1" value="red"/>Red<br>
-  <h2>Name another color</h2>
-  <input type="text" name="color 2"><br>
-  <input id="button" type="button" name="button" value="button"/>
-  </form>
-  </body>
+  
+    <input type="radio" name="color1" value="blue" />Blue
+    <br>
+    <input type="radio" name="color1" value="green" />Green
+    <br>
+    <input type="radio" name="color1" value="yellow" />Yellow
+    <br>
+    <input type="radio" name="color1" value="red" />Red
+    <br>
+    <h2>Name another color</h2>
+    <input type="text" name="color2" id="color2">
+    <br>
+    <br>
+    <input id="button" type="button" name="button" value="button" />
+  
+</body>
+
 </html>
