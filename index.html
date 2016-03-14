@@ -7,16 +7,16 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() { //shorthand document.ready
-      $("#button").click(function() {
-        $("#bannerr").fadeIn("slow");
-        var name = $("#name").val();
-        $("#bannerName").html(name);
-        var color1 = $('input[name="color1"]:checked').val();
-        var color2 = $('#color2').val();
-        var stop = $("#stop").val();
+      $("#button").click(function() { //runs everything when button is clicked
+        $("#bannerr").fadeIn("slow"); //makes banner appear
+        var name = $("#name").val(); //grabs the users name input and turns it into a var
+        $("#bannerName").html(name); //places the users name in the banner
+        var color1 = $('input[name="color1"]:checked').val();//grabs the users color input from the radio
+        var color2 = $('#color2').val(); //grabs the users 2nd color input 
+        var stop = $("#stop").val(); //gets the value of the slider for the gradient
 
         $('#bannerr').css({
-          background: "linear-gradient( 90deg, " + color1 + ", " + color2 + " " + stop + "%)"
+          background: "linear-gradient( 90deg, " + color1 + ", " + color2 + " " + stop + "%)" //sets the background to a gradient of the 2 colors and the color stop where the slider is
 
         });
       });
