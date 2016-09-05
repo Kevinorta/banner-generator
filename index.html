@@ -11,7 +11,7 @@
         $("#bannerr").fadeIn("slow"); //makes banner appear
         var name = $("#name").val(); //grabs the users name input and turns it into a var
         $("#bannerName").html(name); //places the users name in the banner
-        var color1 = $('input[name="color1"]:checked').val();//grabs the users color input from the radio
+        var color1 = $('input[name="color1"]:checked').val(); //grabs the users color input from the radio
         var color2 = $('#color2').val(); //grabs the users 2nd color input 
         var stop = $("#stop").val(); //gets the value of the slider for the gradient
 
@@ -33,14 +33,13 @@
       height: 250px;
       border: 1px;
       margin: auto;
-      display:none;
+      display: none;
     }
     
     #bannerName {
       font-size: 7em;
       text-align: center;
       color: white;
-     
     }
     
     #stop {
@@ -50,15 +49,7 @@
 </head>
 
 <body>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Test -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-9659908650472576"
-     data-ad-slot="3241313043"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
   <div id="bannerr">
     <h1 id="bannerName">Kevin Orta</h1>
   </div>
@@ -67,21 +58,28 @@
   <h2>Whats your name?</h2>
   <input type="text" name="name" id="name">
   <h2>Pick a Color</h2>
-  
-    <input type="radio" name="color1" value="blue" />Blue
-    <br>
-    <input type="radio" name="color1" value="green" />Green
-    <br>
-    <input type="radio" name="color1" value="yellow" />Yellow
-    <br>
-    <input type="radio" name="color1" value="red" />Red
-    <br>
-    <h2>Name another color</h2>
-    <input type="text" name="color2" id="color2">
-    <br>
-    <br>
-    <input id="button" type="button" name="button" value="button" />
-  
+
+  <input type="radio" name="color1" value="blue" />Blue
+  <br>
+  <input type="radio" name="color1" value="green" />Green
+  <br>
+  <input type="radio" name="color1" value="yellow" />Yellow
+  <br>
+  <input type="radio" name="color1" value="red" />Red
+  <br>
+  <h2>Name another color</h2>
+  <input type="text" name="color2" id="color2">
+  <br>
+  <br>
+  <input id="button" type="button" name="button" value="button" />
+  <div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- 1st ad test -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9659908650472576" data-ad-slot="6473981043" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 </body>
 
 </html>
